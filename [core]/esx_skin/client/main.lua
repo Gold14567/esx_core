@@ -59,7 +59,7 @@ AddEventHandler("esx_skin:playerRegistered", function()
             ESX.TriggerServerCallback("esx_skin:getPlayerSkin", function(skin)
                 if skin == nil then
                     exports["skinchanger"]:LoadSkin({ sex = 0 })
-                    Menu:Saveable()
+                    Menu:Saveable(nil, nil, nil, true)
                 else
                     exports["skinchanger"]:LoadSkin(skin)
                 end
